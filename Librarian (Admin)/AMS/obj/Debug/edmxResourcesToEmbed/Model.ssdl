@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="AMSModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="tbl_Booksdet">
+    <Key>
+      <PropertyRef Name="Book_RFID" />
+    </Key>
+    <Property Name="Book_RFID" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Book_Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Shelf_No" Type="nchar" MaxLength="10" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'AMS.dbo.tbl_StuBookdet' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="tbl_StuBookdet">
+          <Property Name="Stu_RFID" Type="nvarchar" MaxLength="50" />
+          <Property Name="Roll_No" Type="int" />
+          <Property Name="Book_Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="Book_RFID" Type="nvarchar" MaxLength="50" />
+          <Property Name="Issue_date" Type="nvarchar" MaxLength="50" />
+          <Property Name="Return_date" Type="nvarchar" MaxLength="50" />
+          <Property Name="Renewal_date" Type="nvarchar" MaxLength="50" />
+          <Property Name="Renewal_Return_date" Type="nvarchar" MaxLength="50" />
+        </EntityType>-->
+  <EntityType Name="tbl_Studentdet">
+    <Key>
+      <PropertyRef Name="RFID" />
+    </Key>
+    <Property Name="RFID" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Password" Type="nvarchar" MaxLength="50" />
+    <Property Name="Student_Name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="RollNo" Type="int" Nullable="false" />
+    <Property Name="Gender" Type="nchar" MaxLength="10" />
+    <Property Name="Contact_No" Type="nchar" MaxLength="10" />
+    <Property Name="Year_Of_Admsn" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Profile_pic" Type="nvarchar" MaxLength="150" />
+    <Property Name="Pic" Type="image" />
+  </EntityType>
+  <EntityContainer Name="AMSModelStoreContainer">
+    <EntitySet Name="tbl_Booksdet" EntityType="Self.tbl_Booksdet" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_Studentdet" EntityType="Self.tbl_Studentdet" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

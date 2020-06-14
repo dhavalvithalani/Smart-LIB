@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="AMSModelStoreContainer" CdmEntityContainer="AMSEntities">
+    <EntitySetMapping Name="tbl_Booksdet">
+      <EntityTypeMapping TypeName="AMSModel.tbl_Booksdet">
+        <MappingFragment StoreEntitySet="tbl_Booksdet">
+          <ScalarProperty Name="Book_RFID" ColumnName="Book_RFID" />
+          <ScalarProperty Name="Book_Name" ColumnName="Book_Name" />
+          <ScalarProperty Name="Shelf_No" ColumnName="Shelf_No" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_Studentdet">
+      <EntityTypeMapping TypeName="AMSModel.tbl_Studentdet">
+        <MappingFragment StoreEntitySet="tbl_Studentdet">
+          <ScalarProperty Name="RFID" ColumnName="RFID" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Student_Name" ColumnName="Student_Name" />
+          <ScalarProperty Name="RollNo" ColumnName="RollNo" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="Contact_No" ColumnName="Contact_No" />
+          <ScalarProperty Name="Year_Of_Admsn" ColumnName="Year_Of_Admsn" />
+          <ScalarProperty Name="Profile_pic" ColumnName="Profile_pic" />
+          <ScalarProperty Name="Pic" ColumnName="Pic" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

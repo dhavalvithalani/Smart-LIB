@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="AMSModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="tbl_Booksdet">
+    <Key>
+      <PropertyRef Name="Book_RFID" />
+    </Key>
+    <Property Name="Book_RFID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Book_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Shelf_No" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tbl_Studentdet">
+    <Key>
+      <PropertyRef Name="RFID" />
+    </Key>
+    <Property Name="RFID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Student_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="RollNo" Type="Int32" Nullable="false" />
+    <Property Name="Gender" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="Contact_No" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="Year_Of_Admsn" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Profile_pic" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Pic" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityContainer Name="AMSEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="tbl_Booksdet" EntityType="Self.tbl_Booksdet" />
+    <EntitySet Name="tbl_Studentdet" EntityType="Self.tbl_Studentdet" />
+  </EntityContainer>
+</Schema>
